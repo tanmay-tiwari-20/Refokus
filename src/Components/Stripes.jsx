@@ -1,5 +1,6 @@
 import React from "react";
 import Stripe from "./Stripe";
+import { motion } from "framer-motion";
 
 function Stripes() {
   var data = [
@@ -28,11 +29,33 @@ function Stripes() {
       number: 15,
     },
   ];
+
   return (
-    <div className="flex items-center mt-32">
-      {data.map((elem, index) => (
-        <Stripe key={index} val={elem} />
-      ))}
+    <div className="marquee-container flex items-center p-9 w-full h-[150px] overflow-hidden">
+      <motion.div
+        className="marquee flex flex-shrink-0 w-auto py-9"
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{ duration: 40, ease: "linear", repeat: Infinity }}
+      >
+        {data.map((elem, index) => (
+          <Stripe key={index} val={elem} />
+        ))}
+        {data.map((elem, index) => (
+          <Stripe key={index + data.length} val={elem} />
+        ))}
+      </motion.div>
+      <motion.div
+        className="marquee flex flex-shrink-0 w-auto py-9"
+        animate={{ x: ["0%", "-100%"] }}
+        transition={{ duration: 40, ease: "linear", repeat: Infinity }}
+      >
+        {data.map((elem, index) => (
+          <Stripe key={index} val={elem} />
+        ))}
+        {data.map((elem, index) => (
+          <Stripe key={index + data.length} val={elem} />
+        ))}
+      </motion.div>
     </div>
   );
 }

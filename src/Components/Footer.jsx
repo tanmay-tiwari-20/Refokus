@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <div className="max-w-screen-xl mx-auto py-10 flex gap-32">
         <div className="basis-1/2">
           <h1 className="text-[11.5rem] font-semibold leading-none tracking-tight">
@@ -28,9 +28,11 @@ function Footer() {
           </div>
         </div>
       </div>
+      <div className="w-full h-full mt-2 p-5">
       {["Privacy Policy", "Cookie Policy", "Impressum", "Terms", "Webflow Agency"].map((item, index) => (
-              <a className="ml-24 h-full text-sm mt-10 basis-1/2 text-zinc-600">{item}</a>
+              <a className="ml-16 h-full text-sm text-zinc-600">{item}</a>
             ))}
+      </div>
     </div>
   );
 }
