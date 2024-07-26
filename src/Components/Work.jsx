@@ -41,11 +41,14 @@ function Work() {
   ];
 
   return (
-    <div className="w-full mt-10">
+    <div className="w-full">
       <div className="relative max-w-screen-xl mx-auto text-center">
-        <h1 className="text-[30vw] leading-none font-medium select-none tracking-tight">
+        <h1 className="text-[35vw] mt-10 leading-none font-medium select-none tracking-tight">
           work
         </h1>
+        <h3 className="mt-5 text-lg text-zinc-400">
+          Web Design, Webflow Development, Creative Development
+        </h3>
         <div className="absolute top-0 w-full h-full ">
           {images.map((elem, index)=>(elem.isActive && <img className="absolute w-60 rounded-lg -translate-x-[50%] -translate-y-[50%]" src={elem.url} style={{top: elem.top, left: elem.left}} alt="" />))}
         </div>

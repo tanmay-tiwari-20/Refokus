@@ -1,16 +1,26 @@
-import React from 'react'
-import Navbar from './Components/Navbar'
-import Work from './Components/Work'
-import Stripes from './Components/Stripes'
+import React from "react";
+import Navbar from "./Components/Navbar";
+import Work from "./Components/Work";
+import Stripes from "./Components/Stripes";
+import Products from "./Components/Products";
+import Marquees from "./Components/Marquees";
+import Cards from "./Components/Cards";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <div className='w-full h-screen bg-black text-white'>
-      <Navbar />
-      <Work />
-      <Stripes />
-    </div>
-  )
+    <>
+      <div className="w-full h-full bg-black text-white">
+        <Navbar />
+        <Work />
+        <Stripes />
+        <Products />
+        <Marquees />
+        <Cards />
+        <Footer />
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
