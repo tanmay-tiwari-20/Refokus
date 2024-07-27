@@ -10,10 +10,10 @@ function Card({ width, start, para, hover = "false" }) {
     >
       <div className="w-full">
         <div className="w-full flex justify-between items-center">
-          <h3>one heading</h3>
-          <IoIosArrowRoundForward />
+          {start === false ? <h3 className="text-sm">Up Next: News</h3> : <h3 className="text-sm">Get In Touch</h3>}
+          <IoIosArrowRoundForward size={"1.4rem"} />
         </div>
-        <h1 className="text-3xl font-medium mt-5">wfwj</h1>
+        {start === false ? <h1 className="text-3xl font-regular w-2/3 mt-5">Insights and behind the scenes</h1> : <h1 className="text-3xl font-regular w-[11vw] mt-5">Let's do it, together.</h1>}
       </div>
       <div className="down w-full">
         {start && (
@@ -27,8 +27,8 @@ function Card({ width, start, para, hover = "false" }) {
           </>
         )}
         {para && (
-          <p className="text-sm text-zinc-500 font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing.
+          <p className="text-sm text-zinc-300 font-regular">
+            Explore what drives our team.
           </p>
         )}
       </div>

@@ -3,7 +3,9 @@ import React from "react";
 
 function Marquee({ imagesurl, direction }) {
   return (
-    <div className="flex w-full overflow-hidden">
+    <div className="relative flex w-full overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-l from-zinc-900 opacity-10 via-transparent to-black  pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 opacity-10 via-transparent to-black  pointer-events-none"></div>
       <motion.div
         initial={{ x: direction === 'left' ? "0" : "-100%" }}
         animate={{ x: direction === 'left' ? "-100%" : "0"}}

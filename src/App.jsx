@@ -7,6 +7,7 @@ import Marquees from "./Components/Marquees";
 import Cards from "./Components/Cards";
 import Footer from "./Components/Footer";
 import LocomotiveScroll from 'locomotive-scroll';
+import Cursor from "./Components/Cursor";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <div className="w-full h-full bg-black text-white">
+        <Cursor />
         <Navbar />
         <Work />
         <Stripes />
